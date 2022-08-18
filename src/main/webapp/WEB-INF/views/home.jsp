@@ -9,7 +9,7 @@
 </head>
 <body>
 	<h1>My Home Page</h1>
-	<h1>Called by /home</h1>
+	<h1>Called by Ganesh</h1>
 	
 	<%
 	  String name = (String)request.getAttribute("name");

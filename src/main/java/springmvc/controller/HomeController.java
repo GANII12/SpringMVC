@@ -7,12 +7,14 @@ import java.util.List;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
+@RequestMapping("/first")
 public class HomeController {
 
-	@RequestMapping("/home")
+	@RequestMapping(path="/home", method= RequestMethod.GET)
 	public String home(Model model) {
 		System.out.println("Home url");
 		model.addAttribute("name","Arun");
@@ -37,7 +39,7 @@ public class HomeController {
 		ModelAndView modelAndView = new ModelAndView();
 		
 		//setting the data
-		modelAndView.addObject("name", "Ganesh");
+		modelAndView.addObject("name", "Swetha");
 		
 		//setting the view name
 		modelAndView.setViewName("help");
